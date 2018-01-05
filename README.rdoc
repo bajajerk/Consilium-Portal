@@ -1,0 +1,10 @@
+Consilium Portal for Registerations
+
+Rails-4.2.8
+Deployed @Heroku
+
+
+
+
+# Author
+[bajajerk](https://github.com/bajajerk)
