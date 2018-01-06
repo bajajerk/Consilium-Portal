@@ -19,4 +19,5 @@ class User < ActiveRecord::Base
     user.uniquecode="CONS10"+countOfUsers.to_s
   end
 end
+
 end

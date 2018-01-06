@@ -1,0 +1,2 @@
+module MockstocksHelper
+end
