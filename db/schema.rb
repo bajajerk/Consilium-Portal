@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180106131446) do
+ActiveRecord::Schema.define(version: 20180106194009) do
 
   create_table "mockstocks", force: :cascade do |t|
     t.string   "name"
@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(version: 20180106131446) do
     t.string   "name"
     t.string   "uniquecode"
     t.integer  "mockstock_id"
+    t.string   "collegename"
+    t.string   "phone"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
