@@ -11,8 +11,11 @@ def configure_permitted_parameters
 	
 	devise_parameter_sanitizer.permit(:sign_up, keys: [:name,  :email , :password])
     devise_parameter_sanitizer.permit(:account_update, keys: [:name , :email , :password , :remember_me ])
-
 	end
+
+def after_sign_in_path_for(resource)
+  mockstocks_index_url
+end
 
 
 end
