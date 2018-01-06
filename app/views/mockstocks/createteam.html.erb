@@ -15,7 +15,7 @@
             <div class="panel panel-primary">
                 <div class="panel-heading">Create Your Kickass Team</div>
                 <div class="panel-body">
-                     <form action="saveteam" method="post">
+                     <form name ="mockstockForm" action="saveteam" method="post" onsubmit="return validateForm()">
                     
                         <label for="fname">Team Name</label>
                         <input type="text" id="fname" class="form-control" name="teamname" placeholder="Example: Lazy Debuggers">
@@ -48,5 +48,20 @@
     margin-top: 10px;
     }
 </style>
+
+<script type="text/javascript">
+    function validateForm() {
+    var x = document.forms["mockstockForm"]["teamname"].value;
+    var y = document.forms["mockstockForm"]["username1"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+     if (y == "") {
+        alert("Team should contain atleast one member");
+        return false;
+    }
+}
+</script>
 </body>
 </html>

@@ -1,10 +1,13 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+
+  belongs_to :mockstock
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
   devise :omniauthable, omniauth_providers: %i[facebook]
+
 
   def self.from_omniauth(auth)
   where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
@@ -15,8 +18,8 @@ class User < ActiveRecord::Base
     # If you are using confirmable and the provider(s) you use validate emails, 
     # uncomment the line below to skip the confirmation emails.
     # user.skip_confirmation
-    countOfUsers=User.count
-    user.uniquecode="CONS10"+countOfUsers.to_s
+    code=Time.now.to_i  
+    user.uniquecode="CONS"+code.to_s
   end
 end
 

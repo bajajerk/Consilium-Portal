@@ -10,6 +10,16 @@ class MockstocksController < ApplicationController
     end
 
 
+  def saveteam
+    # team=Mockstock.new
+    # team.team_name=
+    return redirect_to '/home/index'
+
+
+  end
+
+
+
   # # GET /mockstocks/1
   # # GET /mockstocks/1.json
   # def show
