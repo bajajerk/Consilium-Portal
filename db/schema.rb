@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180107110705) do
+ActiveRecord::Schema.define(version: 20180107111855) do
 
   create_table "bcases", force: :cascade do |t|
     t.integer  "user_id"
@@ -21,6 +21,15 @@ ActiveRecord::Schema.define(version: 20180107110705) do
   end
 
   add_index "bcases", ["user_id"], name: "index_bcases_on_user_id"
+
+  create_table "casechallenges", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "casechallenges", ["user_id"], name: "index_casechallenges_on_user_id"
 
   create_table "kaizens", force: :cascade do |t|
     t.string   "name"
@@ -83,6 +92,7 @@ ActiveRecord::Schema.define(version: 20180107110705) do
     t.integer  "tradeverse_id"
     t.integer  "kaizen_id"
     t.integer  "shatranj_id"
+    t.integer  "casechallenge_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
