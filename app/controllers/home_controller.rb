@@ -34,7 +34,13 @@ before_action :authenticate_user!
 	    else
 	      @registered=false
 	    end
-	    
+
+	    if(!current_user.mockstock_id.nil?)
+	    	@mockstock=true
+	    else
+	    	@mockstock=false
+	    end
+
 	end
 
 
