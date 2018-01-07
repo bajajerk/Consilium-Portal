@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # resources :shatranjs
   # resources :kaizens
   # resources :tradeverses
   # resources :bcases
@@ -29,6 +30,10 @@ Rails.application.routes.draw do
    get 'kaizens/createteam'
    get 'kaizens/index'
    post 'kaizens/saveteam'
+
+   get 'shatranjs/createteam'
+   get 'shatranjs/index'
+   post 'shatranjs/saveteam'
 
 
 

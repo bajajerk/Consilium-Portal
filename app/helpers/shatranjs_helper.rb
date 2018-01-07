@@ -1,0 +1,2 @@
+module ShatranjsHelper
+end

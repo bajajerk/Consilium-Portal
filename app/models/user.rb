@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   belongs_to :bcase
   belongs_to :tradeverse
   belongs_to :kaizen
+  belongs_to :shatranj
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
