@@ -59,7 +59,7 @@ before_action :authenticate_user!
 	    	@casechallenge=false
 	    end
 
-	     if(!current_user.shatranj_id.nil?)
+	    if(!current_user.shatranj_id.nil?)
 	    	@shatranj=true
 	    else
 	    	@shatranj=false

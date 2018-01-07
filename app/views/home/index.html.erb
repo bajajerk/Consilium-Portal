@@ -4,7 +4,7 @@
 
     <meta charset="utf-8">
    
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="description" content="">
     <meta name="author" content="">
@@ -47,10 +47,11 @@
               <a class="nav-link" href="#">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
+              <!-- <a class="nav-link" href="#">Services</a> -->
+              <a rel="nofollow" data-method="delete" href="/users/sign_out">SIGN OUT</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="/users/sign_out">Sign Out</a>
             </li>
           </ul>
         </div>
@@ -63,18 +64,25 @@
         <div class="col-lg-12 text-center">
           <h1 class="mt-5">Dashboard</h1><br>
           <br>
-          <h2>Events List</h2>
+          <!-- <h2>Events List</h2> -->
+          <% if @registered %>
+             <h2> Your Consilium Unique code is <%= @uniquecode %>
+             </h2><br>
+           <% else %>
+              Fill details to get your code 
+            <% end %>
+
             <div class="container">
             	<div class="row">
             	  <div class="col-md-3"></div>
 		          <div class="card col-md-6">
 					  <div class="card-body">
-					    <h4 class="card-title">Mockstock</h4>
-					    <p class="card-text">A never-experienced-before event will have you brainstorm and strategize the most efficient way of minting money.</p>
+					    <h2 class="card-title">Mockstock</h2>
+					    <p class="card-text" style="font-size: 15px;">A never-experienced-before event will have you brainstorm and strategize the most efficient way of minting money.</p>
 					    <% if @mockstock %>
-						    <span class="badge badge-success">Registered</span>
+						    <span class="badge badge-success" style="font-size: 20px;">Registered</span>
 					    <% else %>
-					    <button type="button" class="btn btn-primary">Register</button>
+					    <button type="button" class="btn btn-primary"  onclick="window.location.href='/mockstocks/createteam'">Register</button>
 					    <% end %>
 					  </div>
 		           </div>
@@ -84,9 +92,13 @@
             	  <div class="col-md-3"></div>
 		          <div class="card col-md-6">
 					  <div class="card-body">
-					    <h4 class="card-title">Kaizen</h4>
-					    <p class="card-text">A contemporary quizzing advent intended to test one's analytical and critical thinking skills</p>
-					    <span class="badge badge-success">Registered</span>
+					    <h2 class="card-title">Kaizen</h2>
+					    <p class="card-text" style="font-size: 15px;">A contemporary quizzing advent intended to test one's analytical and critical thinking skills</p>
+					    <% if @kaizen %>
+						    <span class="badge badge-success" style="font-size: 20px;">Registered</span>
+					    <% else %>
+					    <button type="button" class="btn btn-primary"  onclick="window.location.href='/kaizens/createteam'">Register</button>
+					    <% end %>
 					  </div>
 		           </div>
 		        </div>
@@ -95,9 +107,13 @@
             	  <div class="col-md-3"></div>
 		          <div class="card col-md-6">
 					  <div class="card-body">
-					    <h4 class="card-title">Shatranj</h4>
-					    <p class="card-text">Be ready to challenge yourselves, as the battle of wits and logic begins, beautifully incorporating finance as well! </p>
-					    <span class="badge badge-success">Registered</span>
+					    <h2 class="card-title">Shatranj</h2>
+					    <p class="card-text" style="font-size: 15px;">Be ready to challenge yourselves, as the battle of wits and logic begins, beautifully incorporating finance as well! </p>
+					    <% if @shatranj %>
+						    <span class="badge badge-success" style="font-size: 20px;">Registered</span>
+					    <% else %>
+					    <button type="button" class="btn btn-primary" onclick="window.location.href='/shatranjs/createteam'">Register</button>
+					    <% end %>
 					  </div>
 		           </div>
 		        </div>
@@ -106,9 +122,13 @@
             	  <div class="col-md-3"></div>
 		          <div class="card col-md-6">
 					  <div class="card-body">
-					    <h4 class="card-title">Consilium Case Challenge</h4>
-					    <p class="card-text"> Typical case study competition is where you are given a problem in the preliminary round and you simply have to go and present it in the final round</p>
-					    <span class="badge badge-danger">Not Registered</span>
+					    <h2 class="card-title">Consilium Case Challenge</h2>
+					    <p class="card-text" style="font-size: 15px;"> Typical case study competition is where you are given a problem in the preliminary round and you simply have to go and present it in the final round</p>
+					    <% if @mockstock %>
+						    <span class="badge badge-success" style="font-size: 20px;">Registered</span>
+					    <% else %>
+					    <button type="button" class="btn btn-primary" onclick="window.location.href='/casechallenges/createteam'">Register</button>
+					    <% end %>
 					  </div>
 		           </div>
 		        </div>
@@ -117,8 +137,8 @@
             	  <div class="col-md-3"></div>
 		          <div class="card col-md-6">
 					  <div class="card-body">
-					    <h5 class="card-title">Hackathin</h5>
-					    <p class="card-text"> Hackrupt, a path-breaking hackathon that will see participants involving in an exhaustive but fun-filled 24 hour coding experience, exploring the latest tech sensations</p>
+					    <h2 class="card-title">Hackathon</h2>
+					    <p class="card-text" style="font-size: 15px;"> Hackrupt, a path-breaking hackathon that will see participants involving in an exhaustive but fun-filled 24 hour coding experience, exploring the latest tech sensations</p>
 					    <span class="badge badge-danger">Not Registered</span>
 					  </div>
 		           </div>
