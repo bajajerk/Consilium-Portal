@@ -35,6 +35,7 @@ class KaizensController < ApplicationController
     end
 
     team.save
+    Teamcreated.kaizen(user1.email,user1.name).deliver_now
     return redirect_to '/home/index'
   end
 

@@ -35,6 +35,7 @@ class ShatranjsController < ApplicationController
     end
 
     team.save
+    Teamcreated.shatranj(user1.email,user1.name).deliver_now
     return redirect_to '/home/index'
   end
 
