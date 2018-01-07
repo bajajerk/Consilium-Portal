@@ -4,6 +4,7 @@ Rails.application.routes.draw do
    root to: "home#index"
    get 'home/index'
    get 'home/profile'
+   get 'home/errorpage'
 
 
    get 'mockstocks/index'

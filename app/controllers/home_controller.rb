@@ -44,4 +44,9 @@ before_action :authenticate_user!
 	end
 
 
+	def errorpage
+	end
+	
+
+
 end

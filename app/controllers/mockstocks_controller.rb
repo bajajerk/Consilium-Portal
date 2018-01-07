@@ -17,16 +17,21 @@ class MockstocksController < ApplicationController
     username1=params[:username1]
     user1=User.find_by_uniquecode(username1)
 
-    if (user1 && user1.mockstock_id.nil)
+    if (user1 && user1.mockstock_id.nil?)
     team.users<<user1
+    else
+      return redirect_to '/home/errorpage'
     end
 
     if (params[:username2].length>0)
       username2=params[:username2]
       user2=User.find_by_uniquecode(username2)
-        if (user2 && user2.mockstock_id.nil)
+        if (user2 && user2.mockstock_id.nil?)
              team.users<<user2
-        end
+        else
+             return redirect_to '/home/errorpage'
+    end
+
     end
 
     team.save
