@@ -40,6 +40,7 @@ class CasechallengesController < ApplicationController
   end
 
   team.save
+  Teamcreated.casechallenge(user1.email,user1.name).deliver_now
   return redirect_to '/home/index'
   end
  
