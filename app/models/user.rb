@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   belongs_to :mockstock
   belongs_to :bcase
   belongs_to :tradeverse
+  belongs_to :kaizen
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
