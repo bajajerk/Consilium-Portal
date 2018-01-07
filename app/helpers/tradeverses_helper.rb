@@ -1,0 +1,2 @@
+module TradeversesHelper
+end

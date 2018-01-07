@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180107083400) do
+ActiveRecord::Schema.define(version: 20180107090015) do
 
   create_table "bcases", force: :cascade do |t|
     t.integer  "user_id"
@@ -31,6 +31,15 @@ ActiveRecord::Schema.define(version: 20180107083400) do
   end
 
   add_index "mockstocks", ["user_id"], name: "index_mockstocks_on_user_id"
+
+  create_table "tradeverses", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "tradeverses", ["user_id"], name: "index_tradeverses_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -53,6 +62,7 @@ ActiveRecord::Schema.define(version: 20180107083400) do
     t.string   "collegename"
     t.string   "phone"
     t.integer  "bcase_id"
+    t.integer  "tradeverse_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

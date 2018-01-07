@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # resources :tradeverses
   # resources :bcases
   # resources :mockstocks
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
@@ -17,6 +18,11 @@ Rails.application.routes.draw do
    get 'bcases/createteam'
    get 'bcases/index'
    post 'bcases/saveteam'
+
+
+   get 'tradeverses/createteam'
+   get 'tradeverses/index'
+   post 'tradeverses/saveteam'
 
 
 
