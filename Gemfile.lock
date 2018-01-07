@@ -94,6 +94,7 @@ GEM
     multipart-post (2.0.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
+    noty-rails (2.3.8)
     oauth2 (1.4.0)
       faraday (>= 0.8, < 0.13)
       jwt (~> 1.0)
@@ -197,6 +198,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.0)
   jquery-rails
+  noty-rails
   omniauth-facebook
   pg (= 0.20.0)
   rails (= 4.2.8)
