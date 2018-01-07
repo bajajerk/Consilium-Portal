@@ -47,6 +47,32 @@ before_action :authenticate_user!
 	    	@bcase=false
 	    end
 
+	     if(!current_user.kaizen_id.nil?)
+	    	@kaizen=true
+	    else
+	    	@kaizen=false
+	    end
+
+	     if(!current_user.casechallenge_id.nil?)
+	    	@casechallenge=true
+	    else
+	    	@casechallenge=false
+	    end
+
+	     if(!current_user.shatranj_id.nil?)
+	    	@shatranj=true
+	    else
+	    	@shatranj=false
+	    end
+
+
+	    if(!current_user.tradeverse_id.nil?)
+	    	@tradeverse=true
+	    else
+	    	@tradeverse=false
+	    end
+
+
 
 	end
 
