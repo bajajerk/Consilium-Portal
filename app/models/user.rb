@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
 
   belongs_to :mockstock
+  belongs_to :bcase
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 

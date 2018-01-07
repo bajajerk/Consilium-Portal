@@ -41,6 +41,13 @@ before_action :authenticate_user!
 	    	@mockstock=false
 	    end
 
+	    if(!current_user.bcase_id.nil?)
+	    	@bcase=true
+	    else
+	    	@bcase=false
+	    end
+
+
 	end
 
 

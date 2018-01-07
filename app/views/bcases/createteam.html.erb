@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Create team</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Create Your Business Case Team</div>
+                <div class="panel-body">
+                     <form name ="mockstockForm" action="saveteam" method="post" onsubmit="return validateForm()">
+                    
+                        <label for="fname">Team Name</label>
+                        <input type="text" id="fname" class="form-control" name="teamname" placeholder="Example: Lazy Debuggers">
+                        
+                        
+                        <label for="emailaddr" class="m-t-10">Username Of Team member 1</label>
+                        <input type="text" id="emailaddr" class="form-control" name="username1" placeholder="Username of Team member 1">
+
+
+
+                        <label for="emailaddr" class="m-t-10">Username Of Team member 2</label>
+                        <input type="text" id="emailaddr" class="form-control" name="username2" placeholder="Username of Team member 2(optional)">
+
+
+                        <label for="emailaddr" class="m-t-10">Username Of Team member 3</label>
+                        <input type="text" id="emailaddr" class="form-control" name="username3" placeholder="Username of Team member 3(optional)">
+                        
+
+                        
+                        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                        
+                        <center><input type="submit" class="btn btn-primary m-t-10" id="submitbtn" name="submit" value="Submit"></center>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style type="text/css">
+    .m-t-10 {
+    margin-top: 10px;
+    }
+</style>
+
+<script type="text/javascript">
+    function validateForm() {
+    var x = document.forms["mockstockForm"]["teamname"].value;
+    var y = document.forms["mockstockForm"]["username1"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+     if (y == "") {
+        alert("Team should contain atleast one member");
+        return false;
+    }
+}
+</script>
+</body>
+</html>
