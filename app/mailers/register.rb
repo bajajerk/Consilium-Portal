@@ -12,4 +12,12 @@ class Register < ApplicationMailer
 
     mail to: email
   end
+
+   def refermail email , usermail
+   puts "mail called"
+   @email = email
+   @usermail=usermail
+   mail to:email
+   end
+   
 end

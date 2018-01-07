@@ -11,6 +11,7 @@ Rails.application.routes.draw do
    get 'home/profile'
    get 'home/errorpage'
    post 'home/updateprofile'
+   post 'home/refer'
 
 
    get 'mockstocks/index'

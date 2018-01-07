@@ -80,6 +80,16 @@ before_action :authenticate_user!
 
 	def errorpage
 	end
+
+
+	def refer
+    refermail =params[:referemail]
+    puts "REFERAL MAILS IS "
+    puts refermail
+    Register.refermail(refermail,current_user.email).deliver_now
+    return redirect_to '/'
+  end
+
 	
 
 
