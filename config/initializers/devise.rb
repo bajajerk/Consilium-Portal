@@ -141,7 +141,7 @@ Devise.setup do |config|
   config.reconfirmable = true
   # config.omniauth :facebook, "1709176549128219", "8a0dbc7b34ff9cd1077edff377362db6"
 
-  config.omniauth :facebook, ENV['1709176549128219'], ENV['8a0dbc7b34ff9cd1077edff377362db6'],
+  config.omniauth :facebook, '1709176549128219', '8a0dbc7b34ff9cd1077edff377362db6',
                 scope: 'public_profile,email',
                 info_fields: 'email,first_name,last_name,gender,birthday,location,picture',
                 client_options: {
