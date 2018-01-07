@@ -21,6 +21,7 @@ before_action :authenticate_user!
    	code=Time.now.to_i  
     user.uniquecode="CONS"+code.to_s
    	user.save
+   	Register.success(user.name, user.email, user.uniquecode).deliver_now
    	return redirect_to '/'
    end
 
