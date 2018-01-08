@@ -15,6 +15,10 @@ before_action :authenticate_user!
 
 
    def updateprofile
+
+   	if(!current_user.phone.nil? && !current_user.collegename.nil?)
+   		return redirect_to '/'
+    else
    	user=current_user
    	user.phone=params[:phone]
    	user.collegename=params[:collegename]
@@ -23,6 +27,8 @@ before_action :authenticate_user!
    	user.save
    	Register.success(user.name, user.email, user.uniquecode).deliver_now
    	return redirect_to '/'
+    end
+    
    end
 
 

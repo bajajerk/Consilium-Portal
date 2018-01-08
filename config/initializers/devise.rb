@@ -149,7 +149,7 @@ Devise.setup do |config|
   #                   authorize_url: "https://m.facebook.com/v2.8/dialog/oauth"
   #               }
 
-  config.omniauth :facebook, '1709176549128219', '8a0dbc7b34ff9cd1077edff377362db6', callback_url: "https://consiliumnsit.herokuapp.com/users/auth/facebook/callback"
+  config.omniauth :facebook, '1709176549128219', '8a0dbc7b34ff9cd1077edff377362db6', callback_url: "http://localhost:3000/users/auth/facebook/callback"
                                                                            
 
 
