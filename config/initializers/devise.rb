@@ -145,7 +145,7 @@ Devise.setup do |config|
                 scope: 'public_profile,email',
                 info_fields: 'email,first_name,last_name,gender,birthday,location,picture',
                 client_options: {
-                    site: 'https://graph.facebook.com/v2.11',
+                    site: 'https://graph.facebook.com/v2.8',
                     authorize_url: "https://m.facebook.com/v2.8/dialog/oauth"
                 }
 
