@@ -8,30 +8,41 @@ class KaizensController < ApplicationController
   end
 
   def createteam
+    @usermail=current_user.email
   end
+
 
 
   def saveteam
     team=Kaizen.new
     team.name=params[:teamname]
-    username1=params[:username1]
-    user1=User.find_by_uniquecode(username1)
+    user1=current_user
 
-    if (user1 && user1.kaizen_id.nil?)
+    if (user1.kaizen_id.nil?)
     team.users<<user1
     else
       return redirect_to '/home/errorpage'
     end
 
-    if (params[:username2].length>0)
-      username2=params[:username2]
-      user2=User.find_by_uniquecode(username2)
+    if (params[:email2].length>0)
+      email2=params[:email2]
+      user2=User.find_by_email(email2)
         if (user2 && user2.kaizen_id.nil?)
              team.users<<user2
+        elsif (user2 && !user2.kaizen_id.nil?)
+             return redirect_to '/home/errorpage'    
         else
-             return redirect_to '/home/errorpage'
-    end
-
+             newUser2=User.new
+             newUser2.email=email2
+             newUser2.name=params[:name2]
+             newUser2.collegename=params[:collegename2]
+             newUser2.phone=params[:phone]
+             newUser2.password='conspassword'
+             newUser2.save
+             team.users<<newUser2
+             eventname='Kaizen'
+             Teamcreated.newusermade(newUser2.email,newUser2.name,eventname).deliver_now
+        end
     end
 
     team.save
