@@ -31,4 +31,13 @@ class Teamcreated < ApplicationMailer
   end
 
 
+  def newusermade email , name , eventname
+    @name=name
+    @email=email
+    @eventname=eventname
+    mail to: email
+  end
+
+
+
 end

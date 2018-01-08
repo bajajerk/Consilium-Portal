@@ -2,6 +2,7 @@ class BcasesController < ApplicationController
  before_action :authenticate_user!, except: [:index]
   
   def createteam
+    @usermail=current_user.email
   end
 
   def index
