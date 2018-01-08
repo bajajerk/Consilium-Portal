@@ -15,10 +15,10 @@
             <div class="panel panel-primary">
                 <div class="panel-heading">Create Your Kickass Shatranj Team</div>
                 <div class="panel-body">
-                     <form name ="mockstockForm" action="saveteam" method="post" onsubmit="return validateForm()">
+                     <form name ="ShatranjForm" action="saveteam" method="post" onsubmit="return validateForm()">
                     
-          <label for="fname">Team Name</label>
-                        <input type="text" id="fname" class="form-control" name="teamname" placeholder="Example: Lazy Debuggers">
+                        <label for="fname">Team Name</label>
+                        <input type="text" id="fname" required class="form-control" name="teamname" placeholder="Example: Lazy Debuggers">
                         
                         
                         <label for="emailaddr" class="m-t-10">Email Of Team member 1</label>
@@ -64,16 +64,13 @@
 
 <script type="text/javascript">
     function validateForm() {
-    var x = document.forms["mockstockForm"]["teamname"].value;
-    var y = document.forms["mockstockForm"]["username1"].value;
+    var x = document.forms["ShatranjForm"]["teamname"].value;
+  
     if (x == "") {
         alert("Name must be filled out");
         return false;
     }
-     if (y == "") {
-        alert("Team should contain atleast one member");
-        return false;
-    }
+  
 }
 </script>
 </body>
