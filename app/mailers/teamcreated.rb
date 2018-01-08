@@ -30,6 +30,11 @@ class Teamcreated < ApplicationMailer
     mail to: email
   end
 
+  def bcase email, name
+     @name=name
+     mail to: email
+   end
+
 
   def newusermade email , name , eventname
     @name=name
