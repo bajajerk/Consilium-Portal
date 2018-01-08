@@ -36,7 +36,7 @@ class KaizensController < ApplicationController
              newUser2.email=email2
              newUser2.name=params[:name2]
              newUser2.collegename=params[:collegename2]
-             newUser2.phone=params[:phone]
+             newUser2.phone=params[:phone2]
              newUser2.password='conspassword'
              newUser2.save
              team.users<<newUser2
