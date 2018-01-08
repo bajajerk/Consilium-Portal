@@ -18,21 +18,49 @@
                      <form name ="mockstockForm" action="saveteam" method="post" onsubmit="return validateForm()">
                     
                         <label for="fname">Team Name</label>
-                        <input type="text" id="fname" class="form-control" name="teamname" placeholder="Example: Lazy Debuggers">
+                        <input type="text" id="teamname" required class="form-control" name="teamname" placeholder="Example: Lazy Debuggers">
                         
                         
-                        <label for="emailaddr" class="m-t-10">Username Of Team member 1</label>
-                        <input type="text" id="emailaddr" class="form-control" name="username1" placeholder="Username of Team member 1">
+                        <label for="emailaddr" class="m-t-10">Email Of Team member 1</label>
+                        <input type="text" id="emailaddr" class="form-control" value="<%= @usermail %>" readonly >
 
 
 
-                        <label for="emailaddr" class="m-t-10">Username Of Team member 2</label>
-                        <input type="text" id="emailaddr" class="form-control" name="username2" placeholder="Username of Team member 2(optional)">
+                        <label for="emailaddr" class="m-t-10">Name Of Team member 2</label>
+                        <input type="text" id="emailaddr" required class="form-control" name="name2" placeholder="Name of Team member 2">
 
 
-                        <label for="emailaddr" class="m-t-10">Username Of Team member 3</label>
-                        <input type="text" id="emailaddr" class="form-control" name="username3" placeholder="Username of Team member 3(optional)">
+
+                        <label for="emailaddr" class="m-t-10">Email address Of Team member 2</label>
+                        <input type="text" id="emailaddr" required class="form-control" name="email2" placeholder="Email address of Team member 2">
+
+
+
+                        <label for="emailaddr" class="m-t-10">College name Team member 2</label>
+                        <input type="text" id="emailaddr" required class="form-control" name="collegename2" placeholder="College name of Team member 2">
                         
+
+                        <label for="emailaddr" class="m-t-10">Phone number of Team member 2</label>
+                        <input type="text" id="emailaddr" required class="form-control" name="phone2" placeholder="Phone of Team member 2">
+
+
+
+                        <label for="emailaddr" class="m-t-10">Name Of Team member 3(optional)</label>
+                        <input type="text" id="emailaddr" class="form-control" name="name3" placeholder="Name of Team member 2">
+
+
+
+                        <label for="emailaddr" class="m-t-10">Email address Of Team member 3(optional)</label>
+                        <input type="text" id="emailaddr" class="form-control" name="email3" placeholder="Email address of Team member 3">
+
+
+
+                        <label for="emailaddr" class="m-t-10">College name Team member 3(optional)</label>
+                        <input type="text" id="emailaddr" class="form-control" name="collegename3" placeholder="College name of Team member 3">
+                        
+
+                        <label for="emailaddr" class="m-t-10">Phone number of Team member 3(optional)</label>
+                        <input type="text" id="emailaddr" class="form-control" name="phone3" placeholder="Phone of Team member 3">
 
                         
                         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
@@ -56,8 +84,8 @@
 <script type="text/javascript">
     function validateForm() {
     var x = document.forms["mockstockForm"]["teamname"].value;
-    var y = document.forms["mockstockForm"]["username1"].value;
-    var z = document.forms["mockstockForm"]["username2"].value;    
+    var y = document.forms["mockstockForm"]["email2"].value;
+    // var z = document.forms["mockstockForm"]["email2"].value;    
 
     if (x == "") {
         alert("Name must be filled out");
@@ -67,10 +95,10 @@
         alert("Team should contain atleast two members");
         return false;
     }
-    if (z == "") {
-        alert("Team should contain atleast two members");
-        return false;
-    }
+    // if (z == "") {
+    //     alert("Team should contain atleast two members");
+    //     return false;
+    // }
 }
 </script>
 </body>
