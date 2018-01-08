@@ -141,13 +141,16 @@ Devise.setup do |config|
   config.reconfirmable = true
   # config.omniauth :facebook, "1709176549128219", "8a0dbc7b34ff9cd1077edff377362db6"
 
-  config.omniauth :facebook, '1709176549128219', '8a0dbc7b34ff9cd1077edff377362db6',
-                scope: 'public_profile,email',
-                info_fields: 'email,first_name,last_name,gender,birthday,location,picture',
-                client_options: {
-                    site: 'https://graph.facebook.com/v2.8',
-                    authorize_url: "https://m.facebook.com/v2.8/dialog/oauth"
-                }
+  # config.omniauth :facebook, '1709176549128219', '8a0dbc7b34ff9cd1077edff377362db6',
+  #               scope: 'public_profile,email',
+  #               info_fields: 'email,first_name,last_name,gender,birthday,location,picture',
+  #               client_options: {
+  #                   site: 'https://graph.facebook.com/v2.8',
+  #                   authorize_url: "https://m.facebook.com/v2.8/dialog/oauth"
+  #               }
+
+  config.omniauth :facebook, '1709176549128219', '8a0dbc7b34ff9cd1077edff377362db6', callback_url: "http://localhost:3000/users/auth/facebook/callback"
+
 
 
   # Defines which key will be used when confirming an account
