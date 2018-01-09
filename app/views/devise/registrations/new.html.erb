@@ -1,73 +1,64 @@
-   <!DOCTYPE html>
-<html>
 <head>
-  <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Signup</title>
+  <link href="/stylesheets/signin.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
-<body>
 
 
-
+<!-- <body style="background-color: #000"> -->
 <div class="panel panel-default devise-bs">
   <div class="panel-heading">
-    <h4><%= t('.sign_up', default: 'Sign up') %></h4>
+    <h4 align="center">Sign Up</h4>
   </div>
 
+<section id="total" style="background-color: black;">
+<div class="col-md-6 col-md-offset-3">
   <div class="panel-body">
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { role: 'form' }) do |f| %>
+    <form role="form" class="new_user" id="new_user" action="/users" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="IDJ3coOW9qQkYGF7qZpWtMTfv3Ug/erQTXIHyyL6KL/U3MCB6eZnTFmN2wHpoJbbelVEi/8r7ZZsrlt/2m6PKg==" />
 
 
      <div class="form-group">
-        <%= f.label :Name %>
-        <%= f.text_field :name, autofocus: true, class: 'form-control' %>
+        <label for="user_Name">Name</label>
+        <input autofocus="autofocus" class="form-control" type="text" name="user[name]" id="user_name" />
       </div>
 
 
       <div class="form-group">
-        <%= f.label :College_name %>
-        <%= f.text_field :collegename, autofocus: true, class: 'form-control' %>
+        <label for="user_College_name">College Name</label>
+        <input autofocus="autofocus" class="form-control" type="text" name="user[collegename]" id="user_collegename" />
       </div>
 
       <div class="form-group">
-        <%= f.label :Phone %>
-        <%= f.text_field :phone, autofocus: true, class: 'form-control' %>
-      </div>
-
-
-
-
-
-
-
-      <div class="form-group">
-        <%= f.label :email %>
-        <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+        <label for="user_Phone">Phone</label>
+        <input autofocus="autofocus" class="form-control" type="text" name="user[phone]" id="user_phone" />
       </div>
 
       <div class="form-group">
-        <%= f.label :password %>
-        <%= f.password_field :password, class: 'form-control' %>
+        <label for="user_email">Email</label>
+        <input autofocus="autofocus" class="form-control" type="email" value="" name="user[email]" id="user_email" />
       </div>
-
-      <%= f.hidden_field :inteam, :value => false %>
 
       <div class="form-group">
-        <%= f.label :password_confirmation %>
-        <%= f.password_field :password_confirmation, class: 'form-control' %>
+        <label for="user_password">Password</label>
+        <input class="form-control" type="password" name="user[password]" id="user_password" />
       </div>
-      <%= f.submit t('.sign_up', default: 'Sign up'), class: 'btn btn-primary' %>
-    <% end %>
-  </div>
+
+      <div class="form-group">
+        <label for="user_password_confirmation">Password Confirmation</label>
+        <input class="form-control" type="password" name="user[password_confirmation]" id="user_password_confirmation" />
+      </div>
+      
+      <!-- <button  onclick="window.location.href='/users/sign_up'" class="btn btn-primary center-block">Sign Up</button><br> -->
+
+      <input type="submit" name="commit" value="Sign up" class="btn btn-primary center-block " style="background-color: #7a0901" /> <br>
+
+</form>  
+
+<h4 align="center">Already have an account?</h4>
+<button  onclick="window.location.href='/users/sign_up'" class="btn btn-primary center-block">Login</button>
+
+
 </div>
+</div>
+</div>
+</section>
 
- <!-- <a href="/users/sign_in"></a><br /> -->
 
- <button type="button" class="btn btn-danger" onclick="window.location.href='/users/sign_in'" >Login</button>
-
-
-</body>
-</html>
