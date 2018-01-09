@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html>
 <head>
-  <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/signin.css">
-    <title>Login</title>
+  <link href="/stylesheets/signin.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
-<body>
 
-<script type ="text/javascript">
-  noty({text: 'You need to sign in or sign up before continuing. ' , type : 'error'});
-</script>
 
 <div class="panel panel-default devise-bs">
   <div class="panel-heading">
@@ -26,7 +13,9 @@
   <div class="col-md-6 col-md-offset-3">
   <div class="panel-body">
 
-    <form role="form" class="new_user" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="LlgUHxRtlzcODUTcmRCV0EdlTIaMFECIhmpbAES2AzbatqPsfh0G33Pg/qbZKlW/+e+3eFPCR86ntge0vCKkow==" />
+    <form role="form" class="new_user" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post">
+      <input name="utf8" type="hidden" value="&#x2713;" />
+      <input type="hidden" name="authenticity_token" value="LlgUHxRtlzcODUTcmRCV0EdlTIaMFECIhmpbAES2AzbatqPsfh0G33Pg/qbZKlW/+e+3eFPCR86ntge0vCKkow==" />
       <div class="form-group">
         <label for="user_email">Email</label>
         <input autofocus="autofocus" class="form-control" type="email" value="" name="user[email]" id="user_email" />
@@ -34,14 +23,11 @@
 
       <div class="form-group">
         <label for="user_password">Password</label>
-        <input autocomplete="off" class="form-control" type="password" name="user[password]" id="user_password/>
+        <input autocomplete="off" class="form-control" type="password" name="user[password]" id="user_password">
       </div>
-
-      <div class="checkbox">
-        <label for="user_remember_me">
-          <input name="user[remember_me]" type="hidden" value="0" />
-          <input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me"/>Remember me</label></div>
-          <button id="butu" onclick="window.location.href='/users/sign_up'" class="btn btn-primary">Sign In</button>
+      <input type="submit" name="commit" value="Sign in" class="btn btn-primary">
+    </form>
+    
           <br>
           <a href="'/users/password/new'" onclick="window.location.href='/users/password/new'">Forgot Password?</a>
           <br>
@@ -55,119 +41,7 @@
   </div>
 </section>
 
-<style type="text/css">
-body{
-  background-color: #fdd835;
-}
 
-.panel > .panel-heading {
-    background-image: none;
-    background-color: #082c66;
-    font-family: 'Nunito', sans-serif;
-    color: white;
-}
-
-#total{
-  font-size: 15px;
-  font-family: 'Nunito', sans-serif;
-}
-
-#total h2{
-  font-size: 17px;
-  font-family: 'Nunito', sans-serif;
-}
-
-#total h4{
-  font-size: 17px;
-}
-
-#total h1{
-  font-size: 18px;
-  font-family: 'Nunito', sans-serif;
-}
-
-#total button {
-  background-color: #000;
-  color: #fff;
-  font-family: 'Nunito', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  border: 0;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  display: center-block;
-}
-
-.button:hover, .button:focus {
-  background-color: #3d3d3d;
-  color: #fff;
-}
-
-#total butu{
-  background-color: #000;
-  color: #fff;
-  font-family: 'Nunito', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  border: 0;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  display: center-block;
-}
-.loginBtn {
-  box-sizing: border-box;
-  position: relative;
-  /* width: 13em;  - apply for fixed size */
-  margin: 0.2em;
-  padding: 0 15px 0 46px;
-  border: none;
-  text-align: left;
-  line-height: 34px;
-  white-space: nowrap;
-  border-radius: 0.2em;
-  font-size: 16px;
-  color: #FFF;
-  display: center-block;
-}
-.loginBtn:before {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 34px;
-  height: 100%;
-}
-.loginBtn:focus {
-  outline: none;
-}
-.loginBtn:active {
-  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
-}
-
-
-/* Facebook */
-.loginBtn--facebook {
-  background-color: #4C69BA;
-  background-image: linear-gradient(#4C69BA, #3B55A0);
-  text-shadow: 0 -1px 0 #354C8C;
-  display: center-block;
-}
-.loginBtn--facebook:before {
-  border-right: #364e92 1px solid;
-  display: center-block;
-  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 6px no-repeat;
-}
-.loginBtn--facebook:hover,
-.loginBtn--facebook:focus {
-  background-color: #5B7BD5;
-  background-image: linear-gradient(#5B7BD5, #4864B1);
-}
-
-  
-</style>
 
 </body>
 </html>
