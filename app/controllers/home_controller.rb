@@ -11,14 +11,14 @@ before_action :authenticate_user!
 	   		@collegename=current_user.collegename
 	   		@collegenamebool=true
 	   	else
-	   		@collegenamebool=true
+	   		@collegenamebool=false
 	   	end
 
 	   	if (!current_user.phone.nil?)
 	   		@phone=current_user.phone
 	   		@phonebool=true
 	   	else
-	   		@phonebool=true
+	   		@phonebool=false
 	   	end
    	    # return redirect_to '/'
 	# else
@@ -35,10 +35,10 @@ before_action :authenticate_user!
    	user=current_user
    	user.phone=params[:phone]
    	user.collegename=params[:collegename]
-   	code=Time.now.to_i  
-    user.uniquecode="CONS"+code.to_s
+   	# code=Time.now.to_i  
+    # user.uniquecode="CONS"+code.to_s
    	user.save
-   	Register.success(user.name, user.email, user.uniquecode).deliver_now
+   	# Register.success(user.name, user.email, user.uniquecode).deliver_now
    	return redirect_to '/'
     end
     
