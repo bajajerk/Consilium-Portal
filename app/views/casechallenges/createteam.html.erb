@@ -15,7 +15,7 @@
             <div class="panel panel-primary">
                 <div class="panel-heading">Create Your Consilium case challenge Team</div>
                 <div class="panel-body">
-                     <form name ="mockstockForm" action="saveteam" method="post" onsubmit="return validateForm()">
+                     <form name ="casechallengeForm" action="saveteam" method="post" onsubmit="return validateForm()">
                     
                         <label for="fname">Team Name</label>
                         <input type="text" id="teamname" required class="form-control" name="teamname" placeholder="Example: Lazy Debuggers">
@@ -83,23 +83,26 @@
 
 <script type="text/javascript">
     function validateForm() {
-    var x = document.forms["mockstockForm"]["teamname"].value;
-    var y = document.forms["mockstockForm"]["email2"].value;
-    // var z = document.forms["mockstockForm"]["email2"].value;    
+    var teamname = document.forms["casechallengeForm"]["teamname"].value;
+    var email3 = document.forms["casechallengeForm"]["email3"].value;
+    var name3 = document.forms["casechallengeForm"]["name3"].value;
+    var phone3 = document.forms["casechallengeForm"]["phone3"].value;
+    var collegename3 = document.forms["casechallengeForm"]["collegename3"].value;
 
-    if (x == "") {
+
+    if (teamname == "") {
         alert("Name must be filled out");
         return false;
     }
-     if (y == "") {
-        alert("Team should contain atleast two members");
-        return false;
+    if (email3!= "" || name3!= ""|| phone3!="" ||collegename3!="" ){
+        if (email3== "" ||  name3== "" || phone3=="" || collegename3=="" )
+            {
+               alert("If you want to add third team member , Add all credentials :- Name,email,College name & Phone");
+                   return false;
+            }
     }
-    // if (z == "") {
-    //     alert("Team should contain atleast two members");
-    //     return false;
-    // }
-}
+} 
+</script>
 </script>
 </body>
 </html>

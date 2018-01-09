@@ -15,7 +15,7 @@
             <div class="panel panel-primary">
                 <div class="panel-heading">Create Your Kickass Shatranj Team</div>
                 <div class="panel-body">
-                     <form name ="ShatranjForm" action="saveteam" method="post" onsubmit="return validateForm()">
+                     <form name ="shatranjForm" action="saveteam" method="post" onsubmit="return validateForm()">
                     
                         <label for="fname">Team Name</label>
                         <input type="text" id="fname" required class="form-control" name="teamname" placeholder="Example: Lazy Debuggers">
@@ -64,14 +64,26 @@
 
 <script type="text/javascript">
     function validateForm() {
-    var x = document.forms["ShatranjForm"]["teamname"].value;
-  
-    if (x == "") {
+    var teamname = document.forms["shatranjForm"]["teamname"].value;
+    var email2 = document.forms["shatranjForm"]["email2"].value;
+    var name2 = document.forms["shatranjForm"]["name2"].value;
+    var phone2 = document.forms["shatranjForm"]["phone2"].value;
+    var collegename2 = document.forms["shatranjForm"]["collegename2"].value;
+
+
+    if (teamname == "") {
         alert("Name must be filled out");
         return false;
     }
-  
-}
+    if (email2!= "" || name2!= ""|| phone2!="" ||collegename2!="" ){
+        if (email2== "" ||  name2== "" || phone2=="" || collegename2=="" )
+            {
+               alert("If you want to add second team member , Add all credentials :- Name,email,College name & Phone");
+                   return false;
+            }
+    }
+} 
+</script>
 </script>
 </body>
 </html>

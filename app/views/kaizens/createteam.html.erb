@@ -13,9 +13,9 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-primary">
-                <div class="panel-heading">Create Your Kickass Team</div>
+                <div class="panel-heading">Create Your Kickass Kaizen Team</div>
                 <div class="panel-body">
-                     <form name ="bCaseForm" action="saveteam" method="post" onsubmit="return validateForm()">
+                     <form name ="kaizenForm" action="saveteam" method="post" onsubmit="return validateForm()">
                     
                       <label for="fname">Team Name</label>
                         <input type="text" id="fname" required class="form-control" name="teamname" placeholder="Example: Lazy Debuggers">
@@ -66,17 +66,30 @@
 
 <script type="text/javascript">
     function validateForm() {
-    var x = document.forms["bCaseForm"]["teamname"].value;
-    var y = document.forms["bCaseForm"]["username1"].value;
-    if (x == "") {
+    var teamname = document.forms["kaizenForm"]["teamname"].value;
+    var email2 = document.forms["kaizenForm"]["email2"].value;
+    var name2 = document.forms["kaizenForm"]["name2"].value;
+    var phone2 = document.forms["kaizenForm"]["phone2"].value;
+    var collegename2 = document.forms["kaizenForm"]["collegename2"].value;
+
+
+    if (teamname == "") {
         alert("Name must be filled out");
         return false;
     }
-     if (y == "") {
-        alert("Team should contain atleast one member");
-        return false;
+    if (email2!= "" || name2!= ""|| phone2!="" ||collegename2!="" ){
+        if (email2== "" ||  name2== "" || phone2=="" || collegename2=="" )
+            {
+               alert("If you want to add second team member , Add all credentials :- Name,email,College name & Phone");
+                   return false;
+            }
+        // alert("Name must be fucked");
+        // return false;
+
     }
-}
+
+
+} 
 </script>
 </body>
 </html>
