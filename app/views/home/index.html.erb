@@ -75,6 +75,11 @@
 					  <div class="card-body">
 					    <h2 class="card-title">Mockstock</h2>
 					    <p class="card-text" style="font-size: 15px;">A never-experienced-before event will have you brainstorm and strategize the most efficient way of minting money.</p>
+					    <% if @mockstock %>
+						    <span class="badge badge-success" style="font-size: 20px;">Registered</span>
+					    <% else %>
+					    <button type="button" class="btn btn-primary"  onclick="location.href='http://consilium-nsit.bitballoon.com/tradeverse-5.html'">Register</button>
+					    <% end %>
 					  </div>
 		           </div>
 		        </div>
