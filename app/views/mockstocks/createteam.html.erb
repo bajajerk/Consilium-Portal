@@ -66,11 +66,29 @@
 
 <script type="text/javascript">
     function validateForm() {
-    var x = document.forms["mockstockForm"]["teamname"].value;
-    if (x == "") {
+    var teamname = document.forms["mockstockForm"]["teamname"].value;
+    var email2 = document.forms["mockstockForm"]["email2"].value;
+    var name2 = document.forms["mockstockForm"]["name2"].value;
+    var phone2 = document.forms["mockstockForm"]["phone2"].value;
+    var collegename2 = document.forms["mockstockForm"]["collegename2"].value;
+
+
+    if (teamname == "") {
         alert("Name must be filled out");
         return false;
     }
+    if (email2!= "" || name2!= ""|| phone2!="" ||collegename2!="" ){
+        if (email2== "" ||  name2== "" || phone2=="" || collegename2=="" )
+            {
+               alert("If you want to add second team member , Add all credentials :- Name,email,College name & Phone");
+                   return false;
+            }
+        // alert("Name must be fucked");
+        // return false;
+
+    }
+
+
 }
 </script>
 </body>

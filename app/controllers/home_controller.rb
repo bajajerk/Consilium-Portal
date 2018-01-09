@@ -3,13 +3,26 @@ before_action :authenticate_user!
   
 
    def profile
-   	if(current_user.uniquecode.nil?)
+   	# if(current_user.uniquecode.nil?)
 	   	user=current_user
 	   	@name=user.name
 	   	@email=user.email
-	else
-   	  return redirect_to '/'
-    end
+	   	if (!current_user.collegename.nil?)
+	   		@collegename=current_user.collegename
+	   		@collegenamebool=true
+	   	else
+	   		@collegenamebool=true
+	   	end
+
+	   	if (!current_user.phone.nil?)
+	   		@phone=current_user.phone
+	   		@phonebool=true
+	   	else
+	   		@phonebool=true
+	   	end
+   	    # return redirect_to '/'
+	# else
+    # end
    end
 
 

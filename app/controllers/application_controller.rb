@@ -15,13 +15,12 @@ def configure_permitted_parameters
 
 
 def after_sign_in_path_for(resource)
-    if(!current_user.phone.nil? && !current_user.collegename.nil?)
-   		root_url
-    else
-           # home_profile_url
-   		root_url
-
-    end
+   home_profile_url
+    # if(!current_user.phone.nil? && !current_user.collegename.nil?)
+   	# 	root_url
+    # else
+ 		# root_url
+    # end
 end
 
 end
