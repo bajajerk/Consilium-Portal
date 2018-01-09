@@ -60,15 +60,24 @@
         <div class="col-lg-12 text-center">
           <h1 class="mt-5">Dashboard</h1><br>
           <br>
-          <!-- <h2>Events List</h2> -->
-        <!--   <% if @registered %>
-             <h2> Your Consilium Unique code is <%= @uniquecode %>
-             </h2><br>
-           <% else %>
-              Fill details to get your code 
-            <% end %> -->
 
             <div class="container">
+            	        <div class="row">
+            	  <div class="col-md-3"></div>
+		          <div class="card col-md-6">
+					  <div class="card-body">
+					    <h2 class="card-title">Netaji Subas Business Case </h2>
+					    <p class="card-text" style="font-size: 15px;">Tired of solving same old, hypothetical case studies? Come witness a unique event!</p>
+					    <% if @bcase %>
+						    <span class="badge badge-success" style="font-size: 20px;">Registered</span>
+					    <% else %>
+					    <button type="button" class="btn btn-primary" onclick="location.href='http://mayankbajaj.me/Consilium-Landing-Page/businessCase-4.html'">Register</button>
+					    <% end %>
+					  </div>
+		           </div>
+		        </div>
+		        <br>
+
             	<div class="row">
             	  <div class="col-md-3"></div>
 		          <div class="card col-md-6">
@@ -130,21 +139,7 @@
 		        </div>
 		        <br>
 
-		          <div class="row">
-            	  <div class="col-md-3"></div>
-		          <div class="card col-md-6">
-					  <div class="card-body">
-					    <h2 class="card-title">Netaji Subas Business Case </h2>
-					    <p class="card-text" style="font-size: 15px;">Tired of solving same old, hypothetical case studies? Come witness a unique event!</p>
-					    <% if @bcase %>
-						    <span class="badge badge-success" style="font-size: 20px;">Registered</span>
-					    <% else %>
-					    <button type="button" class="btn btn-primary" onclick="location.href='http://mayankbajaj.me/Consilium-Landing-Page/businessCase-4.html'">Register</button>
-					    <% end %>
-					  </div>
-		           </div>
-		        </div>
-		        <br>
+		  
 
 		        <div class="row">
             	  <div class="col-md-3"></div>
