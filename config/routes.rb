@@ -47,6 +47,7 @@ Rails.application.routes.draw do
 
 
     get 'database/index' 
+
     devise_scope :admin do
     get "/sign_in" => "admins/sessions#new" # custom path to login/sign_in
     get "/sign_up" => "admins/registrations#new", as: "new_admin_registration" # custom path to sign_up/registration
