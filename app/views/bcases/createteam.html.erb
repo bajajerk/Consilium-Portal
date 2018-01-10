@@ -44,6 +44,25 @@
                         <input type="text" id="emailaddr" class="form-control" name="phone2" placeholder="Phone of Team member 2">
 
                         
+
+                        <label for="emailaddr" class="m-t-10">Name Of Team member 3(optional)</label>
+                        <input type="text" id="emailaddr" class="form-control" name="name3" placeholder="Name of Team member 3">
+
+
+
+                        <label for="emailaddr" class="m-t-10">Email address Of Team member 3(optional)</label>
+                        <input type="text" id="emailaddr" class="form-control" name="email3" placeholder="Email address of Team member 3">
+
+
+
+                        <label for="emailaddr" class="m-t-10">College name Team member 3(optional)</label>
+                        <input type="text" id="emailaddr" class="form-control" name="collegename3" placeholder="College name of Team member 3">
+                        
+
+                        <label for="emailaddr" class="m-t-10">Phone number of Team member 3(optional)</label>
+                        <input type="text" id="emailaddr" class="form-control" name="phone3" placeholder="Phone of Team member 3">
+
+                        
                         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                         
                         <center><input type="submit" class="btn btn-primary m-t-10" id="submitbtn" name="submit" value="Submit"></center>
@@ -79,6 +98,19 @@
         if (email2== "" ||  name2== "" || phone2=="" || collegename2=="" )
             {
                alert("If you want to add second team member , Add all credentials :- Name,email,College name & Phone");
+                   return false;
+            }
+    }
+
+    var email3 = document.forms["bcaseForm"]["email3"].value;
+    var name3= document.forms["bcaseForm"]["name3"].value;
+    var phone3 = document.forms["bcaseForm"]["phone3"].value;
+    var collegename3 = document.forms["bcaseForm"]["collegename3"].value;
+
+    if (email3!= "" || name3!= ""|| phone3!="" ||collegename3!="" ){
+        if (email3== "" ||  name3== "" || phone3=="" || collegename3=="" )
+            {
+               alert("If you want to add third team member , Add all credentials :- Name,email,College name & Phone");
                    return false;
             }
     }
