@@ -64,7 +64,7 @@ class BcasesController < ApplicationController
 
 
     team.save
-    Teamcreated.bcase(user1.email,user1.name).deliver_now
+    Teamcreated.nsbc(user1.email,user1.name).deliver_now
     return redirect_to '/home/index'
   end
 
