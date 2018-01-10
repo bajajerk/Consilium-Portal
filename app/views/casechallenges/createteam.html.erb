@@ -26,22 +26,22 @@
 
 
 
-                        <label for="emailaddr" class="m-t-10">Name Of Team member 2</label>
-                        <input type="text" id="emailaddr" required class="form-control" name="name2" placeholder="Name of Team member 2">
+                        <label for="emailaddr" class="m-t-10">Name Of Team member 2(optional)</label>
+                        <input type="text" id="emailaddr"  class="form-control" name="name2" placeholder="Name of Team member 2(optional)">
 
 
 
-                        <label for="emailaddr" class="m-t-10">Email address Of Team member 2</label>
-                        <input type="text" id="emailaddr" required class="form-control" name="email2" placeholder="Email address of Team member 2">
+                        <label for="emailaddr" class="m-t-10">Email address Of Team member 2(optional)</label>
+                        <input type="text" id="emailaddr" class="form-control" name="email2" placeholder="Email address of Team member 2(optional)">
 
 
 
                         <label for="emailaddr" class="m-t-10">College name Team member 2</label>
-                        <input type="text" id="emailaddr" required class="form-control" name="collegename2" placeholder="College name of Team member 2">
+                        <input type="text" id="emailaddr" class="form-control" name="collegename2" placeholder="College name of Team member 2(optional)">
                         
 
-                        <label for="emailaddr" class="m-t-10">Phone number of Team member 2</label>
-                        <input type="text" id="emailaddr" required class="form-control" name="phone2" placeholder="Phone of Team member 2">
+                        <label for="emailaddr" class="m-t-10">Phone number of Team member 2(optional)</label>
+                        <input type="text" id="emailaddr" class="form-control" name="phone2" placeholder="Phone of Team member 2(optional)">
 
 
 
@@ -101,6 +101,27 @@
                    return false;
             }
     }
+
+    var email2 = document.forms["casechallengeForm"]["email2"].value;
+    var name2 = document.forms["casechallengeForm"]["name2"].value;
+    var phone2 = document.forms["casechallengeForm"]["phone2"].value;
+    var collegename2 = document.forms["casechallengeForm"]["collegename2"].value;
+
+
+    if (teamname == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+    if (email2!= "" || name2!= ""|| phone2!="" ||collegename2!="" ){
+        if (email2== "" ||  name2== "" || phone2=="" || collegename2=="" )
+            {
+               alert("If you want to add second team member , Add all credentials :- Name,email,College name & Phone");
+                   return false;
+            }
+    }
+
+
+
 } 
 </script>
 </script>

@@ -19,7 +19,7 @@ class CasechallengesController < ApplicationController
       return redirect_to '/home/errorpage'
     end
 
-    # if (params[:email2].length>0)
+    if (params[:email2].length>0)
       email2=params[:email2]
       user2=User.find_by_email(email2)
         if (user2 && user2.casechallenge_id.nil?)
@@ -38,7 +38,7 @@ class CasechallengesController < ApplicationController
              eventname='CONSILIUM CASE CHALLENGE'
              Teamcreated.newusermade(newUser2.email,newUser2.name,eventname).deliver_now
         end
-    # end
+    end
 
 
     if (params[:email3].length>0)
