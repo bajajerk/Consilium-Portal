@@ -1,1 +1,126 @@
-Views here 
+<h1>Database</h1>
+<!-- <p>Find me in app/views/db/index.html.erb</p> -->
+
+
+
+<h2> MockStock Team list </h2> 
+<h3> Teams registered :- <%= @mockstocks.count %> </h3>
+<br>
+<% @mockstocks.each do |team| %>
+	<br>
+	Team name :- <%= team.name %>
+	<ul>
+		<% team.users.each do |u| %>
+		      <li> <%= u.name %> </li>
+		      <li> <%= u.phone %> </li>
+		      <li> <%= u.email %> </li>
+		      <li> <%= u.collegename %> </li>
+		      <br>
+
+		      <% end %>
+  </ul>
+<% end %>
+<br>
+<br>
+
+
+<h2> MockStock Team list </h2> 
+<h3> Teams registered :- <%= @mockstocks.count %> </h3>
+<br>
+<% @mockstocks.each do |team| %>
+	<br>
+	Team name :- <%= team.name %>
+	<ul>
+		<% team.users.each do |u| %>
+		      <li> <%= u.name %> </li>
+		      <li> <%= u.phone %> </li>
+		      <li> <%= u.email %> </li>
+		      <li> <%= u.collegename %> </li>
+		      <br>
+
+		      <% end %>
+  </ul>
+<% end %>
+
+<h2> Shatranj Team list </h2> 
+<h3> Teams registered :- <%= @shatranjs.count %> </h3>
+<br>
+<% @shatranjs.each do |team| %>
+	<br>
+	Team name :- <%= team.name %>
+	<ul>
+		<% team.users.each do |u| %>
+		      <li> <%= u.name %> </li>
+		      <li> <%= u.phone %> </li>
+		      <li> <%= u.email %> </li>
+		      <li> <%= u.collegename %> </li>
+		      <br>
+
+		      <% end %>
+  </ul>
+<% end %>
+<br>
+
+
+
+<h2> B case  Team list </h2> 
+<h3> Teams registered :- <%= @bcases.count %> </h3>
+<br>
+<% @bcases.each do |team| %>
+	<br>
+	Team name :- <%= team.name %>
+	<ul>
+		<% team.users.each do |u| %>
+		      <li> <%= u.name %> </li>
+		      <li> <%= u.phone %> </li>
+		      <li> <%= u.email %> </li>
+		      <li> <%= u.collegename %> </li>
+		      <br>
+
+		      <% end %>
+  </ul>
+<% end %>
+<br>
+
+
+<h2> CCC Team list </h2> 
+<h3> Teams registered :- <%= @casechallenges.count %> </h3>
+<br>
+<% @shatranjs.each do |team| %>
+	<br>
+	Team name :- <%= team.name %>
+	<ul>
+		<% team.users.each do |u| %>
+		      <li> <%= u.name %> </li>
+		      <li> <%= u.phone %> </li>
+		      <li> <%= u.email %> </li>
+		      <li> <%= u.collegename %> </li>
+		      <br>
+
+		      <% end %>
+  </ul>
+<% end %>
+<br>
+
+<h2> Kaizen Team list </h2> 
+<h3> Teams registered :- <%= @kaizens.count %> </h3>
+<br>
+<% @kaizens.each do |team| %>
+	<br>
+	Team name :- <%= team.name %>
+	<ul>
+		<% team.users.each do |u| %>
+		      <li> <%= u.name %> </li>
+		      <li> <%= u.phone %> </li>
+		      <li> <%= u.email %> </li>
+		      <li> <%= u.collegename %> </li>
+		      <br>
+
+		      <% end %>
+  </ul>
+<% end %>
+<br>
+
+
+
+
