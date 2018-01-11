@@ -24,7 +24,7 @@ class CasechallengesController < ApplicationController
       user2=User.find_by_email(email2)
         if (user2 && user2.casechallenge_id.nil?)
              team.users<<user2
-        elsif (user2 && !user2.mockstock_id.nil?)
+        elsif (user2 && !user2.casechallenge_id.nil?)
              return redirect_to '/home/errorpage'    
         else
              newUser2=User.new
@@ -46,7 +46,7 @@ class CasechallengesController < ApplicationController
       user3=User.find_by_email(email3)
         if (user3 && user3.casechallenge_id.nil?)
              team.users<<user3
-        elsif (user3 && !user3.mockstock_id.nil?)
+        elsif (user3 && !user3.casechallenge_id.nil?)
              return redirect_to '/home/errorpage'    
         else
              newUser3=User.new
