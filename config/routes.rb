@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/mayank', as: 'rails_admin'
   # get 'database/index'
 
   # devise_for :admins
